@@ -1,0 +1,5 @@
+.DS_Store
+__pycache__/
+
+# The paper PDF stays out of the repository until the paper is public (tools/prep_assets.py --with-pdf adds it locally).
+assets/paper/

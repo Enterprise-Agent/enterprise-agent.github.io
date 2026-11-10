@@ -1,0 +1,741 @@
+{
+ "authors": [
+  [
+   "Yuchen Ma",
+   [
+    "1"
+   ]
+  ],
+  [
+   "Yue Huang",
+   [
+    "2"
+   ]
+  ],
+  [
+   "Xiaoda Wang",
+   [
+    "3"
+   ]
+  ],
+  [
+   "Shuhang Lin",
+   [
+    "4"
+   ]
+  ],
+  [
+   "Taicheng Guo",
+   [
+    "2",
+    "5"
+   ]
+  ],
+  [
+   "Hai Wang",
+   [
+    "5"
+   ]
+  ],
+  [
+   "Hang Hua",
+   [
+    "6"
+   ]
+  ],
+  [
+   "Jiefeng Chen",
+   [
+    "7"
+   ]
+  ],
+  [
+   "Yixin Liu",
+   [
+    "8"
+   ]
+  ],
+  [
+   "Haitian Zheng",
+   [
+    "9"
+   ]
+  ],
+  [
+   "Wei Xiong",
+   [
+    "10"
+   ]
+  ],
+  [
+   "Hejie Cui",
+   [
+    "11"
+   ]
+  ],
+  [
+   "Defu Cao",
+   [
+    "12"
+   ]
+  ],
+  [
+   "Yuetai Li",
+   [
+    "13"
+   ]
+  ],
+  [
+   "Paulo Salem",
+   [
+    "14"
+   ]
+  ],
+  [
+   "Romain Froger",
+   [
+    "15"
+   ]
+  ],
+  [
+   "Liangliang Cao",
+   [
+    "16"
+   ]
+  ],
+  [
+   "Swadheen Shukla",
+   [
+    "14",
+    "17"
+   ]
+  ],
+  [
+   "Prakhar Mehrotra",
+   [
+    "18"
+   ]
+  ],
+  [
+   "Carl Yang",
+   [
+    "3"
+   ]
+  ],
+  [
+   "Yue Zhao",
+   [
+    "19"
+   ]
+  ],
+  [
+   "Xin Chen",
+   [
+    "12"
+   ]
+  ],
+  [
+   "Chien-Sheng (Jason) Wu",
+   [
+    "12"
+   ]
+  ],
+  [
+   "Silvio Savarese",
+   [
+    "12"
+   ]
+  ],
+  [
+   "Shafiq Rayhan Joty",
+   [
+    "12"
+   ]
+  ],
+  [
+   "Michel Galley",
+   [
+    "14"
+   ]
+  ],
+  [
+   "Dan Roth",
+   [
+    "20",
+    "21"
+   ]
+  ],
+  [
+   "Kush Varshney",
+   [
+    "17"
+   ]
+  ],
+  [
+   "Xiangliang Zhang",
+   [
+    "2"
+   ]
+  ],
+  [
+   "Stefan Feuerriegel",
+   [
+    "1"
+   ]
+  ],
+  [
+   "Jianfeng Gao",
+   [
+    "14"
+   ]
+  ]
+ ],
+ "affiliations": [
+  [
+   1,
+   "lmu",
+   "LMU Munich"
+  ],
+  [
+   2,
+   "notredame",
+   "University of Notre Dame"
+  ],
+  [
+   3,
+   "emory",
+   "Emory University"
+  ],
+  [
+   4,
+   "rutgers",
+   "Rutgers University"
+  ],
+  [
+   5,
+   "amazon",
+   "Amazon"
+  ],
+  [
+   6,
+   "mitibm",
+   "MIT-IBM Watson AI Lab"
+  ],
+  [
+   7,
+   "google",
+   "Google Cloud AI"
+  ],
+  [
+   8,
+   "lehigh",
+   "Lehigh University"
+  ],
+  [
+   9,
+   "adobe",
+   "Adobe"
+  ],
+  [
+   10,
+   "nvidia",
+   "NVIDIA"
+  ],
+  [
+   11,
+   "google",
+   "Google"
+  ],
+  [
+   12,
+   "salesforce",
+   "Salesforce"
+  ],
+  [
+   13,
+   "uw",
+   "University of Washington"
+  ],
+  [
+   14,
+   "microsoft",
+   "Microsoft Research"
+  ],
+  [
+   15,
+   "meta",
+   "Meta"
+  ],
+  [
+   16,
+   "polyu",
+   "The Hong Kong Polytechnic University"
+  ],
+  [
+   17,
+   "ibm",
+   "IBM Research"
+  ],
+  [
+   18,
+   "paypal",
+   "PayPal"
+  ],
+  [
+   19,
+   "usc",
+   "University of Southern California"
+  ],
+  [
+   20,
+   "oracle",
+   "Oracle AI"
+  ],
+  [
+   21,
+   "upenn",
+   "University of Pennsylvania"
+  ]
+ ],
+ "toc": [
+  [
+   1,
+   "Introduction",
+   4
+  ],
+  [
+   1,
+   "Defining Enterprise Agents",
+   5
+  ],
+  [
+   2,
+   "Definition and Unit of Analysis",
+   5
+  ],
+  [
+   2,
+   "Capability, Authority, and Delegation",
+   8
+  ],
+  [
+   2,
+   "A Formal Framework",
+   9
+  ],
+  [
+   1,
+   "Agent Capabilities",
+   12
+  ],
+  [
+   1,
+   "Applications and Deployment Evidence",
+   15
+  ],
+  [
+   2,
+   "Agents Across Business Domains",
+   15
+  ],
+  [
+   2,
+   "The Product Layer",
+   18
+  ],
+  [
+   2,
+   "Cross-Cutting Observations",
+   19
+  ],
+  [
+   1,
+   "Enterprise Integration",
+   20
+  ],
+  [
+   2,
+   "Integration in Current Products",
+   20
+  ],
+  [
+   2,
+   "A Common Architecture",
+   23
+  ],
+  [
+   2,
+   "Frameworks for Building and Testing Agents",
+   23
+  ],
+  [
+   2,
+   "Interfaces to Business Systems",
+   24
+  ],
+  [
+   2,
+   "Interoperability Protocols",
+   25
+  ],
+  [
+   1,
+   "Coordination and Multi-Agent Workflows",
+   26
+  ],
+  [
+   2,
+   "Coordination Topologies in Organizational Work",
+   26
+  ],
+  [
+   2,
+   "Gains and Costs of Multiple Agents",
+   27
+  ],
+  [
+   2,
+   "Multi-Agent Orchestration in Current Products",
+   28
+  ],
+  [
+   2,
+   "People in Multi-Agent Workflows",
+   28
+  ],
+  [
+   2,
+   "Cross-Cutting Workflow Properties",
+   28
+  ],
+  [
+   1,
+   "Simulated Employees and Agent-Run Organizations",
+   29
+  ],
+  [
+   2,
+   "Agents That Simulate People and Organizations",
+   29
+  ],
+  [
+   2,
+   "Agents That Hold Roles",
+   30
+  ],
+  [
+   2,
+   "Accountability, Organizational Design, and Simulation Fidelity",
+   31
+  ],
+  [
+   1,
+   "Evaluation and Benchmarking",
+   32
+  ],
+  [
+   2,
+   "Acceptance Criteria and Their Measurement",
+   32
+  ],
+  [
+   2,
+   "Benchmark Coverage Along Four Dimensions",
+   34
+  ],
+  [
+   2,
+   "Scoring Methods in Current Benchmarks",
+   35
+  ],
+  [
+   2,
+   "Known Problems in Current Benchmarks",
+   37
+  ],
+  [
+   2,
+   "Evaluation Reporting",
+   38
+  ],
+  [
+   1,
+   "Risks, Governance, and Assurance",
+   38
+  ],
+  [
+   2,
+   "Threat Models",
+   39
+  ],
+  [
+   2,
+   "From Failure to Organizational Harm",
+   39
+  ],
+  [
+   2,
+   "Reliability, Composition, and Recovery",
+   40
+  ],
+  [
+   2,
+   "Safety and Irreversibility",
+   41
+  ],
+  [
+   2,
+   "Privacy and Surveillance",
+   41
+  ],
+  [
+   2,
+   "Fairness and Organizational Feedback",
+   42
+  ],
+  [
+   2,
+   "Security as Authority Control",
+   42
+  ],
+  [
+   2,
+   "Accountability: From Identification to Redress",
+   43
+  ],
+  [
+   2,
+   "Oversight and Calibrated Reliance",
+   43
+  ],
+  [
+   2,
+   "Regulation and Standards",
+   43
+  ],
+  [
+   1,
+   "Open Challenges and Research Directions",
+   44
+  ],
+  [
+   2,
+   "Benchmarks as Predictors of Deployment Outcomes",
+   44
+  ],
+  [
+   2,
+   "Combining and Passing On Authority",
+   45
+  ],
+  [
+   2,
+   "Auditing Agents",
+   46
+  ],
+  [
+   2,
+   "Self-Improvement and Recursive Self-Improvement",
+   46
+  ],
+  [
+   2,
+   "Agents That Expand Their Own Authority",
+   47
+  ],
+  [
+   2,
+   "Group Behavior Under Broader Authority",
+   48
+  ],
+  [
+   2,
+   "Work, Employment, and Human Authority",
+   49
+  ],
+  [
+   1,
+   "Boundary: Agent, Service, and Connection in Practice",
+   50
+  ],
+  [
+   2,
+   "Motivation",
+   51
+  ],
+  [
+   2,
+   "Design",
+   51
+  ],
+  [
+   2,
+   "Experiments",
+   53
+  ],
+  [
+   1,
+   "Conclusion",
+   56
+  ]
+ ],
+ "dims": {
+  "fw-agentenv": [
+   112,
+   112
+  ],
+  "fw-aisi": [
+   262,
+   112
+  ],
+  "fw-claude": [
+   112,
+   112
+  ],
+  "fw-google": [
+   112,
+   112
+  ],
+  "fw-harbor": [
+   112,
+   112
+  ],
+  "fw-huggingface": [
+   124,
+   112
+  ],
+  "fw-langgraph": [
+   112,
+   112
+  ],
+  "fw-microsoft": [
+   112,
+   112
+  ],
+  "fw-openai": [
+   112,
+   112
+  ],
+  "inst-adobe": [
+   112,
+   112
+  ],
+  "inst-amazon": [
+   112,
+   112
+  ],
+  "inst-emory": [
+   112,
+   112
+  ],
+  "inst-google": [
+   112,
+   112
+  ],
+  "inst-ibm": [
+   112,
+   112
+  ],
+  "inst-lehigh": [
+   112,
+   112
+  ],
+  "inst-lmu": [
+   112,
+   112
+  ],
+  "inst-meta": [
+   112,
+   112
+  ],
+  "inst-microsoft": [
+   112,
+   112
+  ],
+  "inst-mitibm": [
+   112,
+   112
+  ],
+  "inst-notredame": [
+   112,
+   112
+  ],
+  "inst-nvidia": [
+   112,
+   112
+  ],
+  "inst-oracle": [
+   112,
+   112
+  ],
+  "inst-paypal": [
+   112,
+   112
+  ],
+  "inst-polyu": [
+   112,
+   112
+  ],
+  "inst-rutgers": [
+   112,
+   112
+  ],
+  "inst-salesforce": [
+   112,
+   112
+  ],
+  "inst-upenn": [
+   112,
+   112
+  ],
+  "inst-usc": [
+   112,
+   112
+  ],
+  "inst-uw": [
+   112,
+   112
+  ],
+  "logo-anthropic": [
+   112,
+   112
+  ],
+  "logo-aws": [
+   112,
+   112
+  ],
+  "logo-google": [
+   112,
+   112
+  ],
+  "logo-microsoft": [
+   112,
+   112
+  ],
+  "logo-openai": [
+   112,
+   112
+  ],
+  "logo-relevanceai": [
+   112,
+   112
+  ],
+  "logo-salesforce": [
+   112,
+   112
+  ],
+  "logo-sap": [
+   112,
+   112
+  ],
+  "logo-servicenow": [
+   112,
+   112
+  ],
+  "logo-workday": [
+   112,
+   112
+  ]
+ },
+ "pages": 77
+}
