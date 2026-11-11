@@ -185,10 +185,10 @@ def pdf_link(cls, label, page=''):
     return f'<a class="{cls}" href="{PDF}{page}">{ICON["pdf"]}{label}</a>' if HAS_PDF else ''
 import hashlib
 def ver(name):
-    """A short hash of a file, added to its link so that a browser never pairs a new page with an old stylesheet or script."""
+    """Version assets so browsers refresh changed styles, scripts and brand images."""
     return name + '?v=' + hashlib.sha1((OUT / name).read_bytes()).hexdigest()[:8]
-# the Enterprise Agent icon (tools/brand_icon.py), on a white tile so that the dark green figure shows on the dark bar and footer
-MARK = '<span class="mark"><img src="assets/brand/icon.png" alt="" width="256" height="256"></span>'
+# The selected puzzle logo, exported by tools/brand_icon.py and versioned for browser caches.
+MARK = f'<span class="mark"><img src="{ver("assets/brand/icon.png")}" alt="" width="256" height="256"></span>'
 PROBLEMS = [('Benchmarks as predictors of deployment outcomes', 'A benchmark tells us something about a deployment only if its results predict what happens after the agent is deployed.'),
             ('Combining and passing on authority', 'Access control today checks one request at a time. Agents create cases that such checks miss.'),
             ('Auditing agents', 'To hold an agent accountable, someone outside it must be able to rebuild what it did from evidence they can trust.'),
@@ -454,8 +454,8 @@ page = f"""<!doctype html>
 <title>From Assistants to Coworkers: AI Agents in the Enterprise</title>
 <meta name="description" content="A paper on enterprise agents as deployments: how they are built, connected to company systems, coordinated, evaluated, and governed. With Boundary, an agent framework.">
 <meta name="theme-color" content="#1b2e22">
-<link rel="icon" href="assets/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="{ver('assets/favicon.png')}" type="image/png">
+<link rel="apple-touch-icon" href="{ver('assets/apple-touch-icon.png')}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap">

@@ -1,6 +1,5 @@
-"""Prepare the Enterprise Agent icon from the file supplied for it, tools/brand/enterprise-agent-icon.png.
-The figure's pixels are used as they are: invisible specks are dropped, the figure is made fully opaque
-(it was 253-254 of 255), and it is cropped, centred on a square and resized.
+"""Prepare the selected puzzle logo from tools/brand/enterprise-agent-puzzle.png.
+Drop near-invisible specks, normalize nearly opaque pixels, then crop, center and resize.
 python3 tools/brand_icon.py <site dir>
 Writes assets/brand/icon.png (transparent, 256 px), and assets/favicon.png (64 px) and assets/apple-touch-icon.png (180 px)
 with the figure on a white tile, since the dark green figure does not show on a dark tab bar.
@@ -10,7 +9,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 SITE = Path(sys.argv[1])
-SRC = Path(__file__).parent / 'brand/enterprise-agent-icon.png'
+SRC = Path(__file__).parent / 'brand/enterprise-agent-puzzle.png'
 im = Image.open(SRC).convert('RGBA')
 alpha = im.getchannel('A').point(lambda v: 0 if v < 16 else (255 if v >= 250 else v))
 im.putalpha(alpha)
