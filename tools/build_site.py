@@ -163,15 +163,14 @@ def fig(name, alt, cls=''):
             f'<figcaption><b>Figure {num}.</b>{cap}</figcaption></figure>')
 
 def cutaway():
-    """Figure 1: the illustration as an image, with its labels and leaders as live SVG text."""
-    src = (S / 'figures/paper/stack.svg').read_text()
-    body = src[src.index('<image'):src.rindex('</svg>')]
-    body = re.sub(r'<image id="enterprise-cutaway"([^>]*?)xlink:href="data:image/png;base64,[^"]*"/>',
-                  r'<image\1href="assets/figures/cutaway.jpg"/>', body)
-    assert 'base64' not in body
-    body = body.replace(' font-family="Arial"', '').replace('font-weight="bold"', 'font-weight="800"').replace('font-weight="normal"', 'font-weight="400"')
-    return ('<svg class="diagram cutaway-art" viewBox="0 0 600 345" role="img" aria-label="A cutaway drawing of an office. Its rooms stand for capabilities, '
-            'integration, coordination and governance, and the street outside for work, firms and markets.">' + body + '</svg>')
+    """Figure 1: the overview illustration with editable vector annotations."""
+    src = (OUT / 'assets/figures/overview.svg').read_text()
+    body = src[src.index('>') + 1:src.rindex('</svg>')]
+    body = body.replace('xlink:href="overview-art.png"', 'xlink:href="assets/figures/overview-art.png"')
+    return ('<svg class="diagram cutaway-art" xmlns:xlink="http://www.w3.org/1999/xlink" '
+            'viewBox="0 0 600 582" role="img" aria-label="Enterprise agents as organizational deployments: '
+            'capabilities, integration, coordination, governance, organizational principals, authority, '
+            'delegation, and real consequences.">' + body + '</svg>')
 
 ICON = {
  'pdf': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>',

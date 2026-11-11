@@ -10,12 +10,15 @@ WITH_PDF = '--with-pdf' in sys.argv[3:]
 for d_ in ('figures', 'logos') + (('paper',) if WITH_PDF else ()):
     (OUT / d_).mkdir(parents=True, exist_ok=True)
 dims = {}
-# Figure 1's illustration, with its white point moved so that its paper is pure white and it sits on the page without an edge.
-pm = fitz.Pixmap(str(S / 'figures/paper/assets/enterprise-cutaway/illustration.png'))
-if pm.alpha or pm.n != 3:
-    pm = fitz.Pixmap(fitz.csRGB, pm)
-table = bytes(min(255, round(v * 255 / 250)) for v in range(256))
-fitz.Pixmap(fitz.csRGB, pm.width, pm.height, bytes(pm.samples).translate(table), False).save(OUT / 'figures/cutaway.jpg', jpg_quality=90)
+# Preserve the original illustration and the overview's editable annotations.
+svg = (S / 'figures/paper/overview.svg').read_text()
+svg, count = re.subn(r'xlink:href="data:image/png;base64,[^"]+"',
+                     'xlink:href="overview-art.png"', svg)
+assert count == 1
+(OUT / 'figures/overview.svg').write_text(svg)
+shutil.copy(S / 'figures/paper/assets/enterprise-annotated/stack-original.png', OUT / 'figures/overview-art.png')
+shutil.copy(S / 'figures/paper/overview.png', OUT / 'figures/overview.png')
+
 for p in sorted(p for p in (S / 'figures/pdf2/marks').glob('*.pdf') if not p.name.startswith('icon-')):
     d = fitz.open(p); pg = d[0]
     z = 112 / pg.rect.height
