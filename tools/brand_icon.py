@@ -1,4 +1,4 @@
-"""Prepare the selected puzzle logo from tools/brand/enterprise-agent-puzzle.png.
+"""Prepare the site's faceted green logo from tools/brand/enterprise-agent-polyhedron.png.
 Drop near-invisible specks, normalize nearly opaque pixels, then crop, center and resize.
 python3 tools/brand_icon.py <site dir>
 Writes assets/brand/icon.png (transparent, 256 px), and assets/favicon.png (64 px) and assets/apple-touch-icon.png (180 px)
@@ -9,7 +9,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 SITE = Path(sys.argv[1])
-SRC = Path(__file__).parent / 'brand/enterprise-agent-puzzle.png'
+SRC = Path(__file__).parent / 'brand/enterprise-agent-polyhedron.png'
 im = Image.open(SRC).convert('RGBA')
 alpha = im.getchannel('A').point(lambda v: 0 if v < 16 else (255 if v >= 250 else v))
 im.putalpha(alpha)
