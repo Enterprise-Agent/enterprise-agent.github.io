@@ -61,7 +61,7 @@ Six of the paper's figures and two of its tables are not shown as figures or tab
 
 The per-task-type counts of Figure 19 and the per-Service-type counts of Figure 20 are not printed in the paper. They are typed into `tools/build_site.py` from the figure generator (`build_boundary_figures.py`), so update them there when the experiments change. The build stops if a checked phrase or number no longer matches the paper.
 
-The selected logo is the sage-green puzzle block with a playful mint E and a mint Agent companion, kept at `tools/brand/enterprise-agent-puzzle.png`. `python3 tools/brand_icon.py .` exports `assets/brand/icon.png` for the bar and footer, `assets/favicon.png`, and `assets/apple-touch-icon.png`. It needs Pillow. The bar and footer show the logo on a white tile. Run the icon exporter before `tools/build_site.py`; the page builder versions the image URLs so browser caches refresh. The former robot source is retained at `tools/brand/enterprise-agent-icon.png` for reference.
+The site logo is a faceted green polyhedron. Its source is `tools/brand/enterprise-agent-polyhedron.png`. `python3 tools/brand_icon.py .` exports `assets/brand/icon.png` for the bar and footer, `assets/favicon.png`, and `assets/apple-touch-icon.png`. It needs Pillow. The bar and footer show the logo on a white tile. Run the icon exporter before `tools/build_site.py` to refresh the versioned image URLs. Earlier logo designs are kept in `tools/brand/` for reference.
 
 Both scripts need PyMuPDF (`pip install pymupdf`). Text that is written for the site only (section headings, the headline results in the Boundary part, chart legends, alt text) lives in `tools/build_site.py`. `styles.css` and `script.js` are edited by hand.
 

@@ -186,7 +186,7 @@ import hashlib
 def ver(name):
     """Version assets so browsers refresh changed styles, scripts and brand images."""
     return name + '?v=' + hashlib.sha1((OUT / name).read_bytes()).hexdigest()[:8]
-# The selected puzzle logo, exported by tools/brand_icon.py and versioned for browser caches.
+# The site logo, exported by tools/brand_icon.py and versioned for browser caches.
 MARK = f'<span class="mark"><img src="{ver("assets/brand/icon.png")}" alt="" width="256" height="256"></span>'
 PROBLEMS = [('Benchmarks as predictors of deployment outcomes', 'A benchmark tells us something about a deployment only if its results predict what happens after the agent is deployed.'),
             ('Combining and passing on authority', 'Access control today checks one request at a time. Agents create cases that such checks miss.'),
